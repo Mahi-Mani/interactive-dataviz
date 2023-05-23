@@ -2,16 +2,35 @@ $(document).ready(function () {
 
   var building = "scu";
   var dom;
+  var isClicked = false;
   renderDonutChart(building);
 
   $(".buildingImage").on("click", function (event) {
     event.preventDefault();
+    isClicked = true;
     renderDonutChart(this.id);
   });
 
+  $(".buildingImage").on("mouseover", function (event) {
+    event.preventDefault();
+    console.log(this.id);
+    building = this.id;
+    isClicked = false;
+    renderDonutChart(building);
+  });
+
+  // $(".buildingImage").on("mouseout", function (event) {
+  //   event.preventDefault();
+  //   if (!isClicked) {
+  //     $("#pictogram-chart-building").empty();
+  //     $(".buildingName").empty();
+  //     $("#donutchartBuilding").empty();
+  //   }
+  // });
+
   function renderDonutChart(building) {
     let data = [];
-    let colors = ["#1D267D", "#F5F0BB", "#B70404"];
+    let colors = ["#1D267D", "#F5F0BB", "#E21818"];
 
     let sizes = {
       innerRadius: 70,
@@ -144,9 +163,9 @@ $(document).ready(function () {
         // Handmade legend
         svg.append("circle").attr("cx", 220).attr("cy", 100).attr("r", 6).style("fill", "#1D267D")
         svg.append("circle").attr("cx", 220).attr("cy", 130).attr("r", 6).style("fill", "#F5F0BB")
-        svg.append("circle").attr("cx", 220).attr("cy", 160).attr("r", 6).style("fill", "#B70404")
+        svg.append("circle").attr("cx", 220).attr("cy", 160).attr("r", 6).style("fill", "#E21818")
         // svg.append("circle").attr("cx", 220).attr("cy", 190).attr("r", 6).style("fill", "#black")
-        svg.append("text").attr("x", 240).attr("y", 100).text("Recycling: " + data[0] + "%").style("font-size", "20px").style("fill", "white").attr("alignment-baseline", "middle").attr("id","text1")
+        svg.append("text").attr("x", 240).attr("y", 100).text("Recycling: " + data[0] + "%").style("font-size", "20px").style("fill", "white").attr("alignment-baseline", "middle").attr("id", "text1")
         svg.append("text").attr("x", 240).attr("y", 130).text("Recycling in Compost: " + data[1] + "%").style("font-size", "20px").style("fill", "white").attr("alignment-baseline", "middle")
         svg.append("text").attr("x", 240).attr("y", 160).text("Recycling in Landfill: " + data[2] + "%").style("font-size", "20px").style("fill", "white").attr("alignment-baseline", "middle")
         // svg.append("text").attr("x", 240).attr("y", 190).text("No Records Found").style("font-size", "15px").attr("alignment-baseline", "middle")

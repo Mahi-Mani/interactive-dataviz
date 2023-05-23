@@ -6,7 +6,7 @@ var path = require("path");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 3000;;
+var PORT = process.env.PORT || 8080;
 app.use(express.static("public"));
 
 // Sets up the Express app to handle data parsing
@@ -27,14 +27,6 @@ app.get("/scudonut", function(req, res) {
 
 app.get("/building", function(req, res) {
   res.sendFile(path.join(__dirname, "public/building.html"));
-});
-
-app.get("/bar", function(req, res) {
-  res.sendFile(path.join(__dirname, "public/barchart.html"));
-});
-
-app.get("/donut", function(req, res) {
-  res.sendFile(path.join(__dirname, "public/trydonut.html"));
 });
 
 // Starts the server to begin listening

@@ -1,25 +1,20 @@
-/* :root {
-  --var-color-grey: #898989;
-} */
 
-/* * {
-  box-sizing: border-box;
-} */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
-
-/* #benson:hover,#facilities:hover, #graham:hover,
-#lc:hover,#malley:hover,#swig:hover,#uv:hover,
-#varihall:hover
-{
-  opacity:0.3;
-} */
 
 .contentImage {
   position: relative;
 }
 
 .heading,i,a {
-  color: #FFCC29;
+  color: #FAF189;
+}
+
+/* .heading {
+  margin-left: -40%;
+} */
+
+.link {
+  margin-right: -150%;
 }
 
 #donutHeader, .building-heading, .buildingName {

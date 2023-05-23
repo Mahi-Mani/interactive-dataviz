@@ -7,13 +7,6 @@
   <meta charset="utf-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-
-  <!-- Bootstrap CSS -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
-
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/colorbrewer@1/colorbrewer.min.css">
   <script src="https://cdn.jsdelivr.net/combine/npm/colorbrewer@1/colorbrewer.min.js,npm/d3@3"></script>
   <script src="https://cdn.jsdelivr.net/npm/colorbrewer@1/colorbrewer.min.js"></script>
@@ -33,11 +26,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      Compiled and minified JavaScript 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-
   <!-- Animation CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -52,7 +40,7 @@
   <title>Interactive Data Visualization</title>
 </head>
 
-<body style="background: teal">
+<body style="background: #025464">
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -66,32 +54,28 @@
     crossorigin="anonymous"></script>
   <div class="container">
     <!-- Heading -->
-    <div class="row heading">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <h4><a href="/"><i class="fa-solid fa-house"></i></a> <u>PAPER WASTE SUMMARY AT SCU</u>
-          <a href="/scudonut"><i class="fa-solid fa-arrow-left"></i></a></h4>
+    <div class="row">
+      <div class="col-sm-1 col-md-1 col-lg-1"></div>
+      <div class="col-sm-10 col-md-10 col-lg-10">
+        <h1 class="heading"> <u>PAPER WASTE RECYCLING AT SCU</u>
+        </h1>
         <br>
       </div>
-      <div class="col-md-2"></div>
+      <div class="col-sm-1 col-md-1 col-lg-1">
+        <h1><a href="/"><i class="fa-solid fa-house"></i></a> <a href="/scudonut"><i
+              class="fa-solid fa-arrow-left link"></i></a></h1>
+      </div>
     </div>
     <br>
-    <!-- Graphs -->
-    <!-- Pictogram -->
     <div class="row">
-      <!-- <div class="col-md-6 pictogram">
-        <div id="pictogramHeader">
-        </div>
-        <div id='pictogram-chart' height="200px" weight="200px"></div>
-      </div> -->
       <!-- Donut -->
-      <div class="col-md-6">
+      <div class="col-sm-6 col-md-6 col-lg-6">
         <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-7 building-heading">
+          <div class="col-sm-1 col-md-1 col-lg-1"></div>
+          <div class="col-sm-7 col-md-7 col-lg-7 building-heading">
             <h5>PAPER WASTE SORTING: SCU</h5>
           </div>
-          <div class="col-md-4"></div>
+          <div class="col-sm-4 col-md-4 col-lg-4"></div>
         </div>
         <br><br>
         <div id="donutHeader">
@@ -103,48 +87,48 @@
       </div>
 
       <!-- Building Images -->
-      <div class="col-md-6">
+      <div class="col-sm-6 col-md-6 col-lg-6">
         <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-8 building-heading">
-            <h5>Click on each building to know more!</h5>
+          <div class="col-sm-2 col-md-4 col-lg-4"></div>
+          <div class="col-sm-8 col-md-8 col-lg-8 building-heading">
+            <h5>Hover for more information!</h5>
           </div>
-          <div class="col-md-2"></div>
+          <div class="col-sm-2 col-md-4 col-lg-4"></div>
         </div>
         <div class="row buildings">
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/benson.jpg" width="100px" height="100px" class="buildingImage" id="benson"></img>
             <div>Benson Center</div>
           </div>
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/facilities.jpg" width="100px" height="100px" class="buildingImage"
               id="facilities"></img>
             <div>Facilities</div>
           </div>
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/graham.jpg" width="100px" height="100px" class="buildingImage" id="graham"></img>
             <div>Graham</div>
           </div>
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/LC.jpg" width="100px" height="100px" class="buildingImage" id="lc"></img>
             <div>Learning Commons</div>
           </div>
         </div>
         <br>
         <div class="row">
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/malley.jpg" width="100px" height="100px" class="buildingImage" id="malley"></img>
             <div>Malley</div>
           </div>
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/swig.jpg" width="100px" height="100px" class="buildingImage" id="swig"></img>
             <div>Swig</div>
           </div>
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/UV.jpg" width="100px" height="100px" class="buildingImage" id="uv"></img>
             <div>University Villas</div>
           </div>
-          <div class="col-md-3 contentImage">
+          <div class="col-sm-3 col-md-3 col-lg-3 contentImage">
             <img src="assets/images/vari hall.JPG" width="100px" height="100px" class="buildingImage"
               id="varihall"></img>
             <div>Vari Hall</div>
@@ -153,18 +137,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 buildingName">
-       
+      <div class="col-sm-12 col-md-12 col-lg-12 buildingName">
+
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6 col-md-6 col-lg-6">
         <!-- Pictogram -->
         <div id='pictogram-chart-building'>
 
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-sm-6 col-md-6 col-lg-6">
         <!-- Donut chart -->
         <div id="donutHeader">
         </div>

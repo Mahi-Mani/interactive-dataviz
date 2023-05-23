@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var isClicked = false;
   $("#scu-pictogram").on("click", function (event) {
     event.preventDefault();
     generatePictogram("scu");
@@ -6,8 +7,25 @@ $(document).ready(function () {
 
   $(".buildingImage").on("click", function (event) {
     event.preventDefault();
+    isClicked = true;
     generatePictogram(this.id);
   });
+
+  $(".buildingImage").on("mouseover", function (event) {
+    event.preventDefault();
+    console.log(this.id);
+    isClicked = false;
+    generatePictogram(this.id);
+  });
+
+  // $(".buildingImage").on("mouseout", function (event) {
+  //   event.preventDefault();
+  //   if (!isClicked) {
+  //     $("#pictogram-chart-building").empty();
+  //     $(".buildingName").empty();
+  //     $("#donutchartBuilding").empty();
+  //   }
+  // });
 
   function generatePictogram(building) {
     /* DEFINE CHART SETTINGNS *************************************************************/
@@ -139,7 +157,7 @@ $(document).ready(function () {
       texts = textGrid.selectAll("text")
         .data(data)
         .enter().append("text")
-        .text((d) => d.active ? d.percentNumber + "%" : "")
+        .text((d) => d.active ? d.percentNumber + "% of the total waste" : "")
         .attr("text-anchor", "end")
         .attr('opacity', 0)
         .attr('font-family', fontFamily)
@@ -154,7 +172,7 @@ $(document).ready(function () {
         .transition()
         .delay((d, i) => i / delay)
         .attr('opacity', (d) => d.percentNumber < percentNumber ? 0 : 1)
-      $("#pictogram-chart-text").html("<h4>So, what happened to all the paper? <a href='/scudonut'>Click here <i class='fa-solid fa-arrow-right'></i></a></h4>")
+      $("#pictogram-chart-text").html("<h4>So, what happened to all these papers? <a href='/scudonut'>Click here <i class='fa-solid fa-arrow-right'></i></a></h4>")
 
     }
   }
