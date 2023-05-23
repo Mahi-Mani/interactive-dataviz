@@ -8,6 +8,14 @@ $(document).ready(function () {
   $(".buildingImage").on("click", function (event) {
     event.preventDefault();
     isClicked = true;
+    var building = this.id;
+    console.log(this);
+    $('.buildingImage').each(function () {
+      if (this.id === building)
+        $(this).css("opacity", "1");
+      else
+        $(this).css("opacity", "0.3");
+    });
     generatePictogram(this.id);
   });
 
@@ -15,6 +23,13 @@ $(document).ready(function () {
     event.preventDefault();
     console.log(this.id);
     isClicked = false;
+    var building = this.id;
+    $('.buildingImage').each(function () {
+      if (this.id === building)
+        $(this).css("opacity", "1");
+      else
+        $(this).css("opacity", "0.3");
+    });
     generatePictogram(this.id);
   });
 
