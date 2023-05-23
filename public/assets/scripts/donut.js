@@ -169,6 +169,9 @@ $(document).ready(function () {
         svg.append("text").attr("x", 240).attr("y", 130).text("Recycling in Compost: " + data[1] + "%").style("font-size", "20px").style("fill", "white").attr("alignment-baseline", "middle")
         svg.append("text").attr("x", 240).attr("y", 160).text("Recycling in Landfill: " + data[2] + "%").style("font-size", "20px").style("fill", "white").attr("alignment-baseline", "middle")
         // svg.append("text").attr("x", 240).attr("y", 190).text("No Records Found").style("font-size", "15px").attr("alignment-baseline", "middle")
+        svg.append("text")
+        .attr("text-anchor", "middle")
+        .text("hello");
       }
     }
   }
