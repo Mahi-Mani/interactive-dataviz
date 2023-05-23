@@ -67,7 +67,7 @@ $(document).ready(function () {
     } else if (building === "malley") {
       data = [93.03, 0.98, 5.99];
       dom = "donutchartBuilding";
-      $(".buildingName").html("<h5>PAPER WASTE SORTING: MALLEY</h5>");
+      $(".buildingName").html("<h5>PAPER WASTE SORTING: MALLEY <i class='fa-solid fa-trophy'></i></h5>");
       draw(data);
     } else if (building === "swig") {
       data = [0, 0, 100];
