@@ -1,0 +1,278 @@
+/* :root {
+  --var-color-grey: #898989;
+} */
+
+/* * {
+  box-sizing: border-box;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
+
+/* #benson:hover,#facilities:hover, #graham:hover,
+#lc:hover,#malley:hover,#swig:hover,#uv:hover,
+#varihall:hover
+{
+  opacity:0.3;
+} */
+
+.contentImage {
+  position: relative;
+}
+
+.heading,i,a {
+  color: #FFCC29;
+}
+
+#donutHeader, .building-heading, .buildingName {
+  color: #FD841F
+}
+.content,
+#pictogram-chart-text,
+#donut-chart-text {
+  color: white;
+}
+
+#text1 {
+  color: 'white'
+}
+
+#scu-pictogram {
+  color: #00AF91;
+}
+.contentImage div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.contentImage:hover {
+  cursor: pointer;
+}
+
+.content,
+.scudonut {
+  margin-top: 15%;
+}
+
+.bar:hover {
+  cursor: pointer;
+}
+
+.contentImage:hover div {
+  width: 150px;
+  /* padding: 8px 15px; */
+  visibility: visible;
+  opacity: 0.7;
+}
+
+/* .text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+} */
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+#bensor:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+} */
+
+/* @import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@300); */
+
+body {
+  /* overflow: hidden; */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&family=Satisfy&display=swap');
+
+h1 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#nodataImage {
+  margin: 10%;
+}
+
+body {
+  /* margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  /* From pictogram */
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=165aa8&c2=1e9cf4&gt=l&gd=dtl
+*/
+  /* background: #165AA8; */
+  /* background: linear-gradient(135deg, #165AA8, #1E9CF4); */
+  /* font-family: 'Comfortaa', cursive; */
+
+  /*Center  vertically*/
+  /* margin: 0; */
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /*Center  horizontally*/
+  text-align: center;
+  /* End pictogram */
+}
+
+div.tooltip-donut {
+  position: absolute;
+  text-align: center;
+  padding: .5rem;
+  background: #FFFFFF;
+  color: #313639;
+  border: 1px solid #313639;
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+.pictogram {
+  padding: 0;
+}
+
+/* #pictogramHeader,
+#donutHeader {
+  margin-top: -10%;
+} */
+
+.buildings {
+  margin-top: 10%;
+}
+
+.buildingImage {
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(36, 191, 196, 0.4);
+}
+
+#benson,
+#facilities,
+#graham,
+#lc,
+#malley,
+#swig,
+#uv,
+#varihall {
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .body {
+  background-color: #e2c9be !important;
+  background-image: linear-gradient(315deg, #e2c9be 0%, #fbf7e9 74%);
+} */
+
+text {
+  /* font-family: Helvetica; */
+  color: var(--var-color-grey);
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: var(--var-color-grey);
+  shape-rendering: crispEdges;
+}
+
+.x-axis {
+  font-size: 15px;
+  color: #0066b2;
+}
+
+.y-axis {
+  font-size: 12px;
+  color: #0066b2;
+}
+
+text {
+  color: #0066b2;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* #donutchart {
+  display: block;
+  margin-top: 5%;
+  margin-left: 20%;
+} */
+
+#tooltip {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  background-color: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
